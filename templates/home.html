@@ -15,12 +15,16 @@
 </head>
 <body>
   <div class="container">
-  <h1 class="text-center mt-2 mb-4">Tech Careers</h1>
+  <h1 class="text-center mt-2 mb-4">{{company_name}} Careers</h1>
   <img class="img-fluid" id ="banner" src="https://13dd63a7-5f0a-4f61-af32-1ab704b2bc4b-00-3osokn7kp77ey.sisko.replit.dev/static/banner.jpg" >
   <h2 class="text-center mt-2 mb-4">About Tech Careers</h2>
   <p class="lead">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
   <h2 class="text-center">Open Positions</h2>
-  <p>TODO - Show the jobs here</p>
+  <div>
+    {% for job in jobs %}
+      {% include 'jobitem.html' %}
+    {% endfor %}
+  </div>
   <div class="text-center">
   <button class="btn btn-primary btn-lg">Contact Us</button>
   <p class="mt-4">Copyright 2022, Tech Sarathi</p>
